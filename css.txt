@@ -1,0 +1,19 @@
+function openModal(productId) {
+const modal = document.getElementById('modal');
+const modalDetails = document.getElementById('modal-details');
+
+// Sample data for products
+const products = {
+product1: "<h2>Y2K Vintage Hoodie</h2><p>A classic hoodie from the early 2000s, featuring a bold graphic design.</p><button>Add to Cart</button>",
+product2: "<h2>Cyberpunk Sneakers</h2><p>Stylish sneakers with a futuristic cyberpunk vibe.</p><button>Add to Cart</button>",
+product3: "<h2>Y2K Cargo Pants</h2><p>Functional and trendy cargo pants for a perfect streetwear look.</p><button>Add to Cart</button>"
+};
+
+modalDetails.innerHTML = products[productId];
+modal.style.display = "flex";
+}
+
+function closeModal() {
+const modal = document.getElementById('modal');
+modal.style.display = "none";
+}
